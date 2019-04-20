@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/materialize.css">
+</head>
+<body>
+
+
+    <div class="container"> <!--También simpre se pone un div con la clase container para tener un margen hacia los costados-->
+        <div class="row"><!--Para indicar que trabajaremos con la grid de materialize-->
+            <div class="col s12 m9 l6 xl3 card-panel purple lighten-1 green-text"><h1>Hola Mundo</h1></div>
+        </div>       <!--Tamaños según la resolución de la pantalla así se abracrá un número de col (columnas)
+                12 el maximo y 1 le mínimo porque hay 12 columnas con la grid de materialize-->
+                <!--podemos controlar el color y opacidad de la letra y color de fondo indicadnolo en la clase como
+                se muestra en este ejemplo-->
+    </div>
+    
+    <div class="container">
+        <blockquote><!--Para l barra de color a la izquera del texto-->
+            <!--Para que el texto tenga el fuente que si visuliza en este ejemplo-->
+            <p class="flow-text"> this is a exmaple that uses this tag</p>          
+        </blockquote>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, ipsam?</p>
+        <!--section es para el padding del texto y z-depth es para la sombra que hay abajo de él-->
+        <h5 class="z-depth-1 section">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, nostrum.</h5>
+        <h5 class="z-depth-2 section">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, nostrum.</h5>
+        <h5 class="z-depth-3 section">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, nostrum.</h5>
+        <h5 class="z-depth-4 section">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, nostrum.</h5>
+        <h5 class="z-depth-5 section">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, nostrum.</h5>
+
+        <div class="row">
+                <div class="col s2">
+                    <img src="img/gato.jpg" alt="exmaple-image" class="responsive-img circle">
+                </div><!--Responsive-img para que la imagen respete el número de columnas asigandas-->
+                        <!--cirle para que la imagen tome forma circular-->
+         </div>
+    </div>   
+
+</body>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/materialize.js"></script>
+</html>

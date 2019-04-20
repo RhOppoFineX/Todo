@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/materialize.css">
+    <!--Para tener los iconos de materialize (esto no funciona en local)-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="section">
+            <button class="btn"> Boton1</button>
+            <a href="#" class="btn">Boton2</a>  <!--btn para tener el estilo estandar de un boton-->
+            <button class="btn-flat"> Bototn3 </button> <!-- boton sin estilo-->
+        </div>
+        
+        <div class="section"><!--Color básico-->
+            <button class="btn blue"> Boton1</button><!--Podemos poner un color básico o escogemos uno de la pagina de material-->
+            <a href="#" class="btn blue darken-4">Boton2</a>
+        </div>
+
+        <div class="section">
+            <button class="btn-large red"> Botot1 </button> <!--btn-large boton más grande-->
+            <a href="#" class="btn-small red accent-3"> Boton2 </a> <!--boton pequeño-->
+            <a href="#" class="btn red accent-1"> Boton3 </a> <!--Normal-->
+            <a href="#" class="btn red accent-4 disabled"> Boton4 </a> <!--Deshabilitado-->
+        </div>
+
+        <div class="section">
+            <button class="btn waves-effect waves-light"> Boton1</button><!--waves-efect (efecto al presionar el boton)-->
+            <a href="#" class="btn waves-effect waves-purple">Boton2</a><!--color de la animación-->  
+        </div>
+
+        <div class="section">
+            <button class="btn waves-effect waves-light">
+                <!--direcion en la que se coloca el icono-->
+                <!--material icons para utilizar los iconos de material desgin-->
+            <i class="material-icons left">account_circle</i><!--Etiqueta icon, el tipo de icono se escribe entre la etiqueta
+            y no como una clase-->    
+            Boton1</button>
+            <a href="#" class="btn waves-effect waves-purple">
+            <i class="material-icons righ">adb</i>    
+            Boton2</a>
+
+            <!--Boton flotante rojo con signo más-->
+            <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+            
+        </div>
+    </div>
+
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/materialize.js"></script>
+</body>
+</html>

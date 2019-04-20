@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="nav-wrapper">
+        <div class="container"><!--Colocamos container para que el logo tenga margen a la izquierda y derecha-->
+                <!--Ancla (a) del Logo-->
+            <a href="#" class="brand-logo">Bluuweb</a>
+                                                        <!--Desparece en dispositivos grandes-->
+            <a href="#" data-target="menu-responsive" class="sidenav-trigger left">
+                <i class="material-icons">menu</i>
+            </a>
+
+            <ul class="right hide-on-med-and-down"><!--Poner los items a la derecha del menú-->
+                <!--Si se encoge a la resolucion de un dispositivo mediano los enlaces desaparece-->
+                <li> <a href="#">Enlace</a></li>
+                <li> <a href="#">Enlace</a></li>
+                <li> <a href="#">Enlace</a></li>
+            </ul>
+
+        </div>
+
+    </nav>
+    <!--Menú desplegable cuando se hace pequeña la pantalla-->
+    <ul class="sidenav" id="menu-responsive">
+            <li> <a href="#">Enlace</a></li>
+            <li> <a href="#">Enlace</a></li>
+            <li> <a href="#">Enlace</a></li>
+    </ul>
+    
+    
+
+
+        <script src="../js/jquery-3.3.1.min.js"></script>
+        <script src="../js/materialize.js"></script>
+        <!--Este script inicializa todo lo de javaScript-->
+    <script>
+        
+            document.addEventListener('DOMContentLoaded', function() {
+                M.AutoInit();
+            });
+        
+     </script>
+</body>
+</html>

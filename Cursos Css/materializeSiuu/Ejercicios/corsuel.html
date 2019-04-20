@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container section">
+        <div class="row">
+            <div class="col s12">
+                <!--Indicamos que haremos un slider-->
+                <div class="carousel carousel-slider">
+                    <!--Ancla con una imagen adentro (un item del carrusel)-->
+                    <a href="" class="carousel-item">
+                        <img src="img/s1.jpg" alt="paisaje">
+                    </a>
+
+                    <a href="" class="carousel-item">
+                            <img src="img/s2.jpg" alt="paisaje">
+                    </a>
+
+                    <a href="" class="carousel-item">
+                        <img src="img/s3.jpg" alt="paisaje">
+                    </a>
+                                         
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/materialize.js"></script>    
+    <!-- <script src="../js/carousel.js"></script> O podemos hacer lo siguiente -->
+    <!--Podemos modificar las propiedades del slider-->
+    <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems,{
+                duration: 100,
+                indicators: true
+            });
+        });    
+    </script>
+   
+    </script>
+</body>
+</html>

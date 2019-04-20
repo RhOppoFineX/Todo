@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+     <link rel="stylesheet" href="Css/estilos.css">   
+
+    <title>Hello, world!</title>
+
+    <!-- <style>
+        div[class^="col-"] {
+          background: #d63031;
+          height: 100px;
+          border: 1px solid white;
+          color: white
+        }
+    </style> -->
+    
+</head>
+
+<body>
+
+  <!--Cotenedor-fluid para que ocupe todo el anho disponible-->
+  <div class="container" style="background: skyblue;">
+      <!-- Content here -->
+      <!--Sistema de grillas de 12 columnas como materialize-->
+      <!--Si no se especifica el ancho de las columnas se distribuirán equitativamente-->
+      <div class="row">
+              <!--Extra small  Small    Medium     Large    Extra Large -->
+          <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4  columnas">
+              One
+          </div>
+          <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4 columnas">
+              Two
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-sm columnas">
+              One
+          </div>
+          <div class="col-sm columnas">
+              Two
+          </div>
+          <div class="col-sm columnas">
+              Three
+          </div>
+      </div>
+  </div>
+  
+  <br>
+  <br>
+
+    <!--Ejercicio del curso de platzi CR7-->
+    <div class="container contenedor">
+        <div class="row">
+            <div class="col-sm columnas"> CR7 </div>
+            <div class="col-sm columnas"> CR7 </div>
+            <div class="col-sm columnas"> CR7 </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-sm columnas"> CR7 </div>
+            <div class="col-sm columnas"> CR7 </div>
+            <div class="col-sm columnas"> CR7 </div>
+            <div class="col-sm columnas"> CR7 </div>
+            <div class="col-sm columnas"> CR7 </div>
+    
+            <div class="col-sm columnas"> CR7 </div>
+            <div class="col-sm columnas"> CR7 </div>
+            <div class="col-sm columnas"> CR7 </div>
+            <div class="col-sm columnas"> CR7 </div>
+            <div class="col-sm columnas"> CR7 </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-sm columnas"> CR7 </div>
+            <div class="col-sm columnas"> CR7 </div>
+        </div>
+        <div class="row">
+            <div class="col-sm columnas"> CR7 </div>
+            <div class="col-sm columnas"> CR7 </div>
+            <div class="col-sm columnas"> CR7 </div>
+            <div class="col-sm columnas"> CR7 </div>
+            <div class="col-sm columnas"> CR7 </div>
+        </div>
+        <div class="row">
+            <div class="col-sm columnas"> CR7 </div>
+        </div>
+    </div>
+
+    <br>
+    <!--Nuevo tipo de columa como "tabla"-->
+
+    <div class="container contenedor">
+        <div class="row">
+          <div class="col columnas">Column</div>
+          <div class="col columnas">Column</div>
+          <div class="w-100"></div>
+          <div class="col columnas">Column</div>
+          <div class="col columnas">Column</div>
+        </div>
+    </div>
+    
+    <br>
+
+    <div class="container contenedor">
+        <div class="row justify-content-sm-center"> <!--Centrado sí se está en una pantalla md (mediana)-->
+          <div class="col col-lg-2 columnas">
+            1 of 3
+          </div>
+          <div class="col-md-auto columnas">
+            Variable width content
+          </div>
+          <div class="col col-lg-2 columnas">
+            3 of 3
+          </div>
+        </div>
+        <div class="row">
+          <div class="col columnas">
+            1 of 3
+          </div>
+          <div class="col-md-auto columnas"> <!--Dependiendo del contenido asi de grande será la fila-->
+            Variable width content 
+          </div>
+          <div class="col col-lg-2 columnas">
+            3 of 3
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <!--Responsive-->
+
+      <div class="container contenedor">
+        <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+        <div class="row">
+          <div class="col-12 col-md-8 columnas">.col-12 .col-md-8</div>
+          <div class="col-6 col-md-4 columnas">.col-6 .col-md-4</div>
+        </div>
+      
+        <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+        <div class="row">
+          <div class="col-6 col-md-4 columnas">.col-6 .col-md-4</div>
+          <div class="col-6 col-md-4 columnas">.col-6 .col-md-4</div>
+          <div class="col-6 col-md-4 columnas">.col-6 .col-md-4</div>
+        </div>
+      
+        <!-- Columns are always 50% wide, on mobile and desktop -->
+        <div class="row">
+          <div class="col-6 columnas">.col-6</div>
+          <div class="col-6 columnas">.col-6</div>
+        </div>
+      </div>
+
+      <br>
+
+      <!--Gutters o alcantarilas-->
+
+      <div class="container px-lg-5">
+        <div class="row mx-lg-n5">
+          <div class="col py-3 px-lg-5 border bg-light">Custom column padding</div>
+          <div class="col py-3 px-lg-5 border bg-light">Custom column padding</div>
+        </div>
+      </div>
+
+      <br>
+     <!--Vertical alignment-->
+     <div class="container contenedor">
+        <div class="row align-items-start"> <!--arriba-->
+          <div class="col columnas">
+            One of three columns
+          </div>
+          <div class="col columnas">
+            One of three columns
+          </div>
+          <div class="col columnas">
+            One of three columns
+          </div>
+          <br>
+          <br>
+        </div>
+        
+        <div class="row align-items-center"><!--En medio-->
+          <div class="col columnas">
+            One of three columns
+          </div>
+          <div class="col columnas">
+            One of three columns
+          </div>
+          <div class="col columnas">
+            One of three columns
+          </div>
+          <br>
+          <br>
+        </div>
+
+        <div class="row align-items-end"><!--Al final-->
+          <div class="col columnas">
+            One of three columns
+          </div>
+          <div class="col columnas">
+            One of three columns
+          </div>
+          <div class="col columnas">
+            One of three columns
+          </div>
+          <br>
+          <br>
+        </div>
+        
+      </div>
+      
+      <br>
+      <!--En diagonal-->
+      <div class="container contenedor">
+        <div class="row">
+          <div class="col align-self-start columnas">
+            One of three columns
+          </div>
+          <div class="col align-self-center columnas">
+            One of three columns
+          </div>
+          <div class="col align-self-end columnas">
+            One of three columns
+          </div>
+        </div>
+      </div>
+     <!--Otro intento en diagonal este si funciona--> 
+
+    <div class="container mt-3">
+            <div class="row">
+              <div class="col-12 col-md-6 offset-md-6">
+                Fila 1/Col 1
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-8 col-md-8 offset-md-2">
+                Fila 2/Col 1
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-3 offset-9 col-md-3 offset-md-0">
+                Fila 3/Col 1
+              </div>
+            </div>
+    </div>
+
+
+   <footer>
+
+   </footer> 
+
+      
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

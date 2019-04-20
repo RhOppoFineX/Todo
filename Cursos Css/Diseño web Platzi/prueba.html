@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es"> 
+    <head>
+        <meta charset="UTF-8">
+        <title>Ronaldey</title>
+        <link rel="icon" type="image/png" href="Imagenes/LogoHelado.png">
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
+        <link rel="stylesheet" href="Css/estilos.css">
+        <style>
+            header{
+                background: green;            
+            }        
+        </style>
+        <!--El important en el archivo css no permite que se sobreescriba-->
+    </head>
+
+    <body>
+        <div class="Flexbox"> <!--Solo es un ejemplo-->
+            <div class="Box">
+                <div class="Box-hija"></div>
+                <div class="Box-hija"></div>
+                <div class="Box-hija"></div>
+                <div class="Box-hija"></div>                           
+
+            </div>
+            <div class="Box"> </div>
+            <div class="Box"> </div>
+            <div class="Box"> </div>
+            <div class="Box"> </div>
+            <div class="Box"> </div>
+            <div class="Box"> </div>
+            <div class="Box"> </div>
+            <div class="Box"> </div>
+            <div class="Box"> </div>
+            <div class="Box"> </div>
+        </div>    
+        <header id="Header" class="Header" style="color:red; background:blue">
+        
+         <!--Estilos en línea tiene más peso que la etiqueta style y style más que el archivo css (Se sobreescriben)-->   
+                <figure class="Logo">
+                   <p> <img src="Imagenes/LogoHelado.png" alt="Siuuuuu" width="150" height="145px"> <strong>Helados Siuuu</strong></p> 
+                </figure>                
+            <nav class="Menu">
+                <ol>
+                    <li>
+                        <a class="Link" href="#Portafolio">Portafolio </a>                        
+                    </li>
+            <!--El # significa de direcciona a (seccion) contenido dentro de la misma pagina(Enlace interno)-->
+                    <li>
+                        <a class="Link" href="#Experiencia">Experiencia</a>
+                    </li>
+                    <li>
+                        <a class="Link" href="#Contactenos">Trabajemos Juntos</a>
+                    </li>
+                </ol>                
+            </nav>
+        
+        </header>
+
+        <section class="Hero" id="Campeon">
+            <h1>Hola soy Diego  <br> <strong>Campeón</strong> de <br/> Cardif <br/> <strong> Siuuuuu </strong>              
+            </h1>
+             <!--<figure class="Hero-Container-Image">--> 
+                <!-- <img class="Hero-Image" src="Imagenes/siuu.jpg" witdh="150" height="200" alt="Siuuu"> Imagen de portada-->
+              <!--</figure>-->  
+        </section>
+        
+        <section id="Portafolio" class="Proyecto">
+            <strong> <h2>Portafolio (Proyectos Destacados)</h2> </strong>                         
+            <article class="Project">                
+                <div class="Project-Text">                    
+                    <h3 id="Project-Title">Platzi Video</h3>
+                    <h6 id="Proyect-Course">Java</h6>
+                    <p id="Proyect-Date"><small><strong>Fecha: </strong>   26/10/2018</small></p>                
+                    <p id="Project-Url"><small><strong>Puedes verlo en: </strong>   www.platzi.com</small></p>    
+                    <p id="Project-Description">Video dedicado al fútbol. Para tener una idea de quien es el mejor, <br>
+                    el equipo del mundo chavaletes, porque algunos piensan que no lo es. <br>
+                    El Barca ha ganado 5-1 al real madrid.
+                    </p>
+                </div>
+
+                <figure class="Project-Image-Container">
+                    <img class="Project-Image" src="Imagenes/s8.png" alt="Samsung Galaxy s8" width="300" height="400">
+                </figure>            
+            </article>
+        </section>
+
+        <h2 class="Title-Experiencia">Más sobre mi experiencia</h2>
+        <section id="Experiencia">                   
+            <article class="Experiencie">
+            <figure class="Experiencie-Image-Container">
+                <img class="Experiencie-Image" src="Imagenes/BT-7.png" alt="BT-7" width="450" height="150">
+           </figure>
+                <div class="Event-Text">
+                    <h3 class="Event-Title">BT7 El Salvador</h3>
+                    <p class="Event-Description"> Evento de Teconología ridculamente caro y esperemos que valga la pena <br>
+                    porque si no iré de por gusto a perder mi tiempo mas o menos 6 horas.   
+                    </p>
+                    <a class="Link" href="https://www.youtube.com/watch?v=o8jMLaLNAPE" target="_blank">ver Evento</a>   
+                    <!--_Blank es para que abra el link en otra pestaña--> 
+                </div>                                           
+            </article>
+            <!--Dos-->
+            <article class="Experiencie">
+                <figure class="Experiencie-Image-Container">
+                    <img class="Experiencie-Image" src="Imagenes/BT-7.png" alt="BT-7" width="450" height="150">
+               </figure>
+                    <div class="Event-Text">
+                        <h3 class="Event-Title">BT7 El Salvador</h3>
+                        <p class="Event-Description"> Evento de Teconología ridculamente caro y esperemos que valga la pena <br>
+                        porque si no iré de por gusto a perder mi tiempo mas o menos 6 horas.   
+                        </p>
+                        <a class="Link" href="https://www.youtube.com/watch?v=o8jMLaLNAPE" target="_blank">ver Evento</a>   
+                        <!--_Blank es para que abra el link en otra pestaña--> 
+                    </div>                                           
+                </article>
+                 
+                <!--Tres-->
+                <article class="Experiencie">
+                    <figure class="Experiencie-Image-Container">
+                        <img class="Experiencie-Image" src="Imagenes/BT-7.png" alt="BT-7" width="450" height="150">
+                   </figure>
+                        <div class="Event-Text">
+                            <h3 class="Event-Title">BT7 El Salvador</h3>
+                            <p class="Event-Description"> Evento de Teconología ridculamente caro y esperemos que valga la pena <br>
+                            porque si no iré de por gusto a perder mi tiempo mas o menos 6 horas.   
+                            </p>
+                            <a class="Link" href="https://www.youtube.com/watch?v=o8jMLaLNAPE" target="_blank">ver Evento</a>   
+                            <!--_Blank es para que abra el link en otra pestaña--> 
+                        </div>                                           
+                </article>
+                    <!--Cuatro-->
+                <article class="Experiencie">
+                        <figure class="Experiencie-Image-Container">
+                            <img class="Experiencie-Image" src="Imagenes/BT-7.png" alt="BT-7" width="450" height="150">
+                       </figure>
+                            <div class="Event-Text">
+                                <h3 class="Event-Title">BT7 El Salvador</h3>
+                                <p class="Event-Descriprion"> Evento de Teconología ridculamente caro y esperemos que valga la pena <br>
+                                porque si no iré de por gusto a perder mi tiempo mas o menos 6 horas.   
+                                </p>
+                                <a class="Link" href="https://www.youtube.com/watch?v=o8jMLaLNAPE" target="_blank">ver Evento</a>   
+                                <!--_Blank es para que abra el link en otra pestaña--> 
+                            </div>                                           
+                </article>
+        </section>
+        
+        <section id="Contactenos" class="Contact">             
+            <form action="suscripcion/susbs" class="form-email">
+                <h1> Sección de Contactos </h1>
+                <label for="Email">Dejanos tu Email</label> <!--Direcciona al elemnto que tenga Id de email-->
+                <input type="datetime" placeholder="@Email.com" id="Email"> <!--Value sustituye a placeholder--->
+                <input type="text" placeholder="@OutLook.com"> <!--JTextField--->
+                <input type="submit" value="@Gmail.com"> <!--JButton-->
+                <input type="radio">
+                <input type="radio">
+                <input type="email">
+                <input type="checkbox" id="checkbox">    
+                <input type="checkbox" id="checkbox-dos">
+                <button>Enviar</button>             
+            </form>
+            <div class="Social">
+                <a href="" class="Social-Link Twitter"></a>
+                <a href="" class="Social-Link Facebook"></a>
+                <a href="" class="Social-Link GitHub"></a>
+                <a href="" class="Social-Link Instagram"></a>
+            </div>
+        </section>
+        
+        <footer class="Footer">
+            <div>
+                <p>Curso de Desarrollo Web Online 2018 <img src="Imagenes/Curso.png" alt="Desarrollo Web" width="180px" height="75px"> </p>
+            </div>
+            <div>
+                <p>Desarollado con dedicación para...  <a href="#Header">Brutal</a> </p>
+            </div>
+
+        </footer>
+
+    </body>
+</html>
+

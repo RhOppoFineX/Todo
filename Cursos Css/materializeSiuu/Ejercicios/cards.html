@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/materialize.css">
+</head>
+<body>
+    <!--Recordemos que container es margen a los lados y section padding del texto hacia arriba y abajo-->
+    <div class="container section">
+        <h1>Cards</h1>
+
+        <div class="row">
+
+            <div class="col s4">
+
+                <div class="card"><!--Siempre se pone card y card-content de está manera-->
+                    <div class="card-content"><!--(contenido de la tarjeta (Card))-->
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium temporibus assumenda totam architecto, nam quasi perspiciatis. Perferendis quibusdam dicta praesentium laudantium necessitatibus blanditiis quidem, et laboriosam, suscipit nemo eius iusto!</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col s4">
+                                <!--Color de la tarjeta (Card)-->
+                <div class="card pink">      <!--Color del texto de la tarjeta-->
+                    <div class="card-content white-text">
+                        <!--titulo de la tarjeta-->
+                        <span class="card-title black-text">Lorem, ipsum dolor.</span>
+                        <p>
+                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem architecto nesciunt dicta tempore commodi fugit officia, iure eos illum! Soluta voluptas numquam fugit iste facilis obcaecati unde quia quaerat enim.   
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col s4">
+                <div class="card">
+                    <div class="card-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem assumenda voluptates voluptatem voluptatibus fuga. Quaerat, eius fuga quos nam quidem saepe aliquid, vero deserunt officiis velit exercitationem, numquam rerum doloremque?</p>
+                    </div>
+                    <!--Enlaces de la tarjeta-->
+                    <div class="card-action">
+                        <!--Flow-text es una propiedad que esta en el index y es para hacer más grande el texto
+                        con diferente tipo de letra-->
+                        <a href="" class="flow-text">Enlaces</a>
+                        <a href="" class="">Enlaces</a>                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s4">
+                <!--Carta (tarjeta o Card)-->
+                <div class="card">
+                    <!--para poner una imagen en la Card-->
+                    <div class="card-image">
+                        <img src="img/gato2.jpg" alt="gato">
+                    </div>
+                    <!--Contenido de la tarjeta-->
+                    <div class="card-content"><!--Título-->
+                        <span class="card-title"> Lorem, ipsum dolor.</span>
+                        <!--Texto-->
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est magni necessitatibus vero quibusdam obcaecati sint similique provident dolores. Ea, sapiente odio atque expedita dolorem officia nobis facere nihil natus enim!</p>
+                    </div>
+                    <!--Para poner enlaces en una Card-->
+                    <div class="card-action">
+                        <a href="" class="flow-text red-text"> Enlace </a><!--Enlace-->
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!--Misma card que la anterior pero aquí ponemos el título dentro de la imagen-->
+            <div class="col s4">
+                    <!--Carta (tarjeta o Card)-->
+                    <div class="card">
+                        <!--para poner una imagen en la Card-->
+                        <div class="card-image">
+                            <img src="img/gato2.jpg" alt="gato">
+                            <!--Título-->
+                            <span class="card-title"> Lorem, ipsum dolor.</span>
+                        </div>
+                        <!--Contenido de la tarjeta-->
+                        <div class="card-content">                            
+                            <!--Texto-->
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est magni necessitatibus vero quibusdam obcaecati sint similique provident dolores. Ea, sapiente odio atque expedita dolorem officia nobis facere nihil natus enim!</p>
+                        </div>
+                        <!--Para poner enlaces en una Card-->
+                        <div class="card-action">
+                            <a href="#" class="flow-text red-text"> Enlace </a><!--Enlace-->
+                        </div>                        
+                    </div>
+            </div>
+             <!--Misma card que la anterior pero aquí ponemos un boton-->
+            <div class="col s4">
+                    <!--Carta (tarjeta o Card)-->
+                    <div class="card">
+                        <!--para poner una imagen en la Card-->
+                        <div class="card-image">
+                            <img src="img/gato2.jpg" alt="gato">
+                            <!--Título-->
+                            <span class="card-title"> Lorem, ipsum dolor.</span>
+                              <!--Boton flotante rojo con signo más (es diferente al que se explica en el primer ejemplo)-->
+                            <a class="btn-floating halfway-fab waves-effect waves-light red btn-large"><i class="material-icons">add</i></a>
+                        </div>
+                        <!--Contenido de la tarjeta-->
+                        <div class="card-content">                            
+                            <!--Texto-->
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est magni necessitatibus vero quibusdam obcaecati sint similique provident dolores. Ea, sapiente odio atque expedita dolorem officia nobis facere nihil natus enim!</p>
+                        </div>
+                        <!--Para poner enlaces en una Card-->
+                        <div class="card-action">
+                            <a href="#" class="flow-text red-text"> Enlace </a><!--Enlace-->
+                        </div>                        
+                    </div>
+            </div>
+            <!--Misma estructura que la anterior Card pero en horizontal-->
+            <div class="col s12">
+                <div class="card horizontal">
+                    <div class="card-image">
+                        <img src="img/gato2.jpg" alt="gato">
+                        <span class="card-title"> Lorem, ipsum dolor.</span>
+                        <a class="btn-floating halfway-fab waves-effect waves-light red btn-large"><i class="material-icons">add</i></a>
+                    </div>
+                
+                    <div class="card-content">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore saepe perspiciatis quod, laborum aliquam deleniti animi accusamus commodi reprehenderit obcaecati blanditiis reiciendis id a inventore quam, sapiente omnis excepturi vitae?</p>
+                    </div>
+
+                    <div class="card-action">
+                        <a href="#" class="flow-text red white-text">Enlace</a>
+                    </div>
+                </div>  
+            </div>
+            <!--Tarjeta revelacion-->
+            <div class="col s4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <!--activator es para dar click y se despliega el reveal-->
+                        <img src="img/gato.jpg" alt="gato" class="activator">                      
+                    </div>
+
+                    <div class="card-content">
+                        <span class="card-title activator"> Lorem, ipsum dolor. <i class="material-icons right">more_vert</i></span>
+                        <p><a href="#">This is a link</a></p>                        
+                    </div>
+                    <!--lo que se despelgará de la tarjeta-->
+                    <div class="card-reveal">
+                       <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>    
+                        <p>
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, fugit animi nihil libero temporibus amet, rerum dolores blanditiis aut eum, similique sapiente! Ratione, facere quod optio labore animi cupiditate tempore?   
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <!--Tabs in cards-->
+            <div class="col s8">
+                    <div class="card">
+                            <div class="card-content">
+                              <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                            </div>
+                            <div class="card-tabs">
+                              <ul class="tabs tabs-fixed-width">
+                                <li class="tab"><a href="#test4" class="active">Test 1</a></li>
+                                <li class="tab"><a href="#test5">Test 2</a></li>
+                                <li class="tab"><a href="#test6">Test 3</a></li>
+                              </ul>
+                            </div>
+                            <div class="card-content grey lighten-4">
+                              <div id="test4">Test 1</div>
+                              <div id="test5">Test 2</div>
+                              <div id="test6">Test 3</div>
+                            </div>
+                    </div>
+            </div>
+
+        </div>
+    </div>
+    
+
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/materialize.js"></script>
+    <!--Este script inicializa todo lo de javaScript-->
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            M.AutoInit();
+        });
+    
+    </script>
+</body>
+</html>

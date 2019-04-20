@@ -1,0 +1,167 @@
+$ git config --global user.name "Diego Arias" //para establecer el nombre de usuario
+$ git config --global user.email "d.arias2000.eh@gmail.com" //para establecer el correo
+$ git config --global -l ver los datos // para ver las credenciales de la persona que esta trabajando
+$ git init //crear un repositorio
+$ git status //para ver el status de los archivos del repositorio (ver si se han hecho cambios en los archivos) y ver si git le esta dando seguimiento a estos
+$ git add . // para agregar archivos que queremos que git le de seguimiento "para que git le de seguimiento" (a todos los archivos del repositorio) y agregar cambios
+
+// a los archivos que git les está dando seguimiento estan en una zona conocida como stage "Zona intermediaria donde los archivos están listos para ser confirmados (commit)".
+
+$ git commit -m "comentario"// para confirmar los archivos (confirmar cambios hechos o archivos añadidos) -m Es un parámetro.
+
+$ git diff // Para ver donde hemos cambiado el codigo (compara el ultimo commit con la situación actual)
+$ git checkout . // Regresar al ultimo commit
+$git log //Historial de cambios en el repositorio Escencial letra Q para salir
+
+$ git add index.html . // solo agrega un archivo
+$git add js/ . //Agregar un directorio 
+$git add js/validar.js . //Agregar un archivo que esta dentro de un directorio 
+$git add css/*.css . // Solo agrega los archivos con la extensión que le pongamos
+$git reset //Los archivos que esten confirmados en el stage por el "add" podemos quitarle esa confirmación
+$git add -A // Confirmar todos los archivos
+$git add --all // Confirmar todos los archivos
+$git help //Todos los comandos con una breve descripción
+$git help nombre del comando //Un comando con una breve descripción
+$ git config --global alias.l "log" //colocar un alias a un comando
+$ git commit --amend -m "Modfificación al index" // si nos equivocamos en el mensaje del commit esto sirve para cambiarlo, toma el ultimo commit realizado
+
+								//Fase Dos del curso XD
+
+$ git mv nombre-del-archivo-al-que-se-le-cambiara-el-nombre.html  nuevo-nombre.html // cambiarle nombre a un archivo
+$git rm archivo-a-eliminar //comando para eliminar un archivo
+$ git reset --soft 423881b688dcab6d38c3c634d4ddac7443eab751 //hace una "marcha" ¿que marcha?hacia el commit que le indicamos (ponemos el Id del commit)después soft
+(esto no recupera los elementos o archivos, solo se ubica en el commit que le decimos)
+
+$ git reset --hard 423881b688dcab6d38c3c634d4ddac7443eab751 //esto si recupera los archivos (regresa al commit o reset que le indiquemos) este si "regresa en el time"
+
+$ git reflog // todas las acciones, cambios, reset y commit que se han hecho a diferencia del git log este muestra TODO lo que se ha hecho, en cambio el git log solo los pueden verse los commit.
+
+$git reset --mixed Id-del-commit // retrocede hacia el commit o reset que le indiquemos pero este a diferencia del reset --hard, conserva los cambios que le hemos hecho actualmente
+
+// En el archivo .gitignore podemos poner el nombre de los archivos a los que git no les dará seguimiento
+
+
+
+/*Trabajar en "ramas" nos sirve para hacerle cambios al proyecto como agregar una nueva funcionalidad, sin preocuparnos de que se joda el proyecto XD
+Esto es posible al crear una nueva rama y continuar los cambios ahí sin afectar al proyecto que está en la rama master
+*/
+
+$ git branch nombre-de-la-rama // para crear una nueva rama o branch
+
+$ git log --oneline --decorate --all --graph // más resumido y más visual que el git reflog
+$ git checkout nombre-de-la-rama //Moverse a una rama
+
+//Después que veamos que los cambios en una rama funcionan correctamente hacemos el respectivo commit "a dentro" de esta nueva rama y luego podemos unir (integrar) la rama secundaria a la rama principal master
+
+$ git checkout master // nos movemos a la rama principal del proyecto que estemos trabajando en este caso es "master"
+$ git merge nueva_funcionalidad /* y la unimos con la rama secundaria que en este caso es "nueva_funcionalidad", con esto los cambios hechos en la rama secundaria
+				se guardarán también en la rama principal master
+				*/	
+$ git branch -d nueva_funcionalidad // Ya cuando integramos la rama secundaria a la principal podemos borrar la rama que habíamos creado
+					// si no hacemos al menos un commit en la nueva rama no nos dejará integrarla a la rama principal
+					// Este tipo de merge para hacerlo se necesita que la rama secundaria (nueva_funcionalidad) no modifique el contenido
+					de la rama principal al mismo tiempo que esta (modificar el mismo archivo en las dos ramas) si no tendremos que resolver
+					el conflicto de manera manual (ver video 9 del curso de git y github)	
+$ git checkout -b nombre-de-la-rama // Crear una nueva rama e inmediatamente moverse a ella
+
+
+									//Etiquetas
+
+$ git tag version_de_prueba // Crear una etiqueta (para identificar la evolución del proyecto) solo es una etiqueta de texto en un commit "para identificarlo" 
+
+$ git tag // nombre de la etiqueta para el ultimo commit
+
+$ git tag -d version_de_prueba // Eliminar una etiqueta
+
+$ git tag -a v1.0.0 -m "Versión inicial" //Etiqueta con mensaje incluido
+
+$ git show v1.0.0 // más información sobre la etiqueta
+
+$ git tag -a v0.0.1 b6c942f -m "Versión Beta" // Asignar un Tag a un commit anterior (b6c942f) Id del commit se pueden asignar varios tags a un commit
+
+					
+									//Parte Con Git Hub 
+
+//Creamos un repositorio local
+
+$ git init						//"Subir un repositorio"
+
+$ git add . //Confirmamos los archivos
+
+$ git commit -m "primer commit" // Hacemos el primer commit 
+
+$ git remote add origin https://github.com/RhOppoFineX/demo-repo.git 	/* Enlazar el repositorio local con el de Git Hub*/
+
+$ git push -u origin master // Ultimo paso para hacer Login con el username y contraseña de Git Hub Luego Refrescamos el pagina
+
+//Para un repositorio ya existente 
+
+$ git remote add origin https://github.com/RhOppoFineX/demo-repo-2.git // Lo enlazamos
+
+$ git push -u origin master // Hacemos el "Push" y luego refrescamos la pagina de Git Hub
+
+// "Bajar un repositorio"
+
+$ git clone https://github.com/RhOppoFineX/demo-repo-2.git /*Clonar el repositorio en una carpeta*/
+
+$ git push origin master // Después de bajar los archivos le podemos hacer cambios y luego subirlo y recargamos la pagina de Git Hub 
+
+$ git pull // Bajar un repositorio al cual le hemos hecho cambios en la pagina de Git Hub (Esto después de clonarlo o enlazarlo)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+ 
+
+
+
+
+ 
+

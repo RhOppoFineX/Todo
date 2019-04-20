@@ -1,0 +1,478 @@
+/*
+Reglas:
+Selectores
+Declaraciones   
+Propiedades
+Valores
+*/
+
+
+/*Selector:  este es un selector de etiqueta
+tambiém pueden ser:
+Decentente: elemnto "hijo"
+Clase: ."Nombre de la clase después del punto"
+*/
+header{/*Declaracion*/
+
+    /*Propiedad,  Valor*/           
+    background: skyblue !important;
+    color: purple !important;
+    margin-bottom: 0px;
+    
+}
+
+header{
+    background-color: #24BCF1 !important;
+    color: white !important;  
+    display: flex;
+    height: 150px;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.Menu{
+    height: inherit;/*el valor lo heredará de su "Padre"*/
+}
+
+header ol{
+    
+    display: flex;
+    height: inherit;
+    margin: 0;
+    padding: 0;
+    list-style: none;  
+}
+
+header ol li{
+    height: inherit;
+    display: flex;
+       
+}
+
+header a{
+    display: flex;
+    align-items: center;
+    height: inherit;   
+    padding: 0 20px;   
+           
+}
+
+header figure{
+    margin-top: 0px;    
+}
+
+figure{
+    margin: 0;    
+}
+header img{
+    vertical-align: middle;
+}
+/*selector de clase*/
+.Link{
+    font-style: italic;
+}
+/*Selector de Id*/
+
+#Potafolio{
+    
+}
+
+body{    
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;/*Para quitarle los espacios en blanco a la página web*/
+}
+/*No es un selector descendente porque las etiquetas van separdas por comas(la regla es para todas esas etiquetas)*/
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: normal;
+    /*font-style: italic;  Estilo de fuente*/
+}
+
+.Hero{
+    line-height: 1.5;/*Espacio vertical entre líneas*/
+    font-size: 30px;
+    letter-spacing: -.2px;/*Espacio horizontal entre letras*/
+    text-transform: capitalize; /*Primera letra de cada palabra en mayúscula*/
+    /*text-decoration: dashed;  decoración del texto: subrayado etc*/
+    height: 300px; /*Tamaño que puede ocupar el "Hero". Sí el tamaño del hero es más grande entonces se solopara con los elementos que
+    tenga abajo la página*/
+    background-image: url('../Imagenes/siuu.jpg');/*Ruta relativa partiendo desde este archivo Css*/
+    background-color: #24BCF1;
+    background-size: 500px 300px;
+    background-repeat: no-repeat; /*Para que la imagen no se duplique*/
+    background-position-x: right;
+    border: 8px solid red;
+    border-radius: 3.5px;
+    display: flex;
+    align-items: center;
+   
+}
+
+.Hero h1{
+    margin-top: 0px; /*Reduce el margen a 0 de arriba de esta etiqueta*/
+    /*margin: top right bottom left; Otra forma de poner margenes  */
+    /*También esta el margin Collappse que es cuando dos elementos que estan cercA ENTRE si tienen margenes de distintos tamaños
+    entonces la distancia que los separará será el del margen mayor*/
+    margin: 0;
+}
+
+.Project-Text{
+
+    width: 500px;
+}
+
+/*Selector descendente(Etiquetas <a> que sean "Hijas" de Header ")*/
+header a{
+
+    text-decoration: none; /*Text no subrayado*/
+    color: white;/*Propiedad para ponerle color a los textos*/
+    font-size: 20px;   
+}
+
+
+.Hero h1 strong{
+
+    color: white;
+}
+
+#Portafolio{
+   /* border-top: 10px solid green;   (Diferentes colores para los cuatro bordes del marco (arriba, abajo, izquierda, derecha)
+    border-right: 10px solid yellow;   Propiedades: (tamaño, estilo, color)
+    border-left: 10px solid red;
+    border-bottom: 10px solid skyblue;  */
+
+    /*border-color: red;    (Mismas propiedades, pero para un solo borde)
+    border-width: 10px;
+    border-style: groove;*/
+
+    border: 8px solid #24BCF1;/*Más resumido*/
+    border-radius: 15px;  /*Bordes redondeados en las esquinas*/
+
+    padding: 20px;
+    margin: 0px;
+
+    background: #fafa;
+
+        
+        
+}
+
+#Portafolio h2{
+
+    margin: 0;
+    
+}
+
+#Portafolio h2, #Portafolio h3{
+    
+    color: red;
+    text-transform: uppercase;
+    font-weight: bold;/*Negrita*/
+    font-size: 30px;    
+}
+
+.Project{/*Es el portafolio*/
+
+    background: #24BCF1;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#Project-Title{
+
+    margin: 0 0;/*Arriba y abajo primer valor
+    Izquierda y derecha el segundo*/
+    margin-bottom: 0;
+}
+
+.Project-Text h6,
+.Project-Course,
+.Project-Text p
+{
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.Project-Text strong{
+    font-family: 'Fjalla One', sans-serif;
+}
+
+
+.Project-Text{
+
+   /* display: block;   El elemento busca abarcar todo el ancho disponible (Es el display que viene por defecto
+   en la mayoría de etiquetas)*/
+
+}
+
+.Project-Image-Container{
+
+    /*display: inline; El elemento solo busca abarcar lo que ocupe su contenido (Sin respetar el tamaño asignado por defecto) 
+    
+    inline-block  (Combina los dos display, pero respetando el ancho  establecido anteriormente para un elemento)*/
+}
+
+.Flexbox{
+
+    display: flex; /*Para que los elementos hijos directos sean "Flexibles"*/
+    flex-direction: row;  /* Valor por defecto que tiene el Flex, puede cambiarse a Column*/
+    flex-wrap: wrap; /*Si los elementos no "Caben" Permitir que caigan a la siguiente Fila/Columna
+    Valor por defector (nowrap)*/
+
+    /*EL margin collapse no vale para flexbox*/
+    border: 1px solid red;
+    justify-content: space-around;    
+    
+
+       /*
+La propiedad de css que nos permite definir la forma en que se alinearán o distribuirán los hijos de un elemento al que se le ha asignado un display flex es: justify-content. Y puede tomar entre otros valores, los siguientes:
+
+flex-start: para alinear todos los elementos hacia el inicio del espacio disponible.
+flex-end: para alinear todos los elementos hacia el final, a la derecha.
+center: para alinear todos los elementos al centro del espacio disponible.
+space-between: para distribuir los elementos con un espacio proporcional e igual entre ellos.
+space-evenly: para distribuir los elementos con un espacio proporcional e igual entre ellos (incluyendo el primer y último elementos con respecto a los estremos del espacio disponible).
+space-around: similar a space-evenly pero tanto en el primero como en el último elemento, el espacio hacia los extremos es la mitad del espacio usado entre los elementos.
+    */
+
+    align-items: center;
+    /*Si los elementos se alinearán desde el centro, desde arriba (flex-star) o desde abajo (flex-end)
+    
+    esto depende del flex-direction ejemplo: si es horizontal los elementos a alinearán al centro en sentido vertical(para que quede 
+    en medio) */
+}
+
+.Box{
+
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border: 1px solid #24BCF1;
+    /*align-self: center; a pesar que el elemento padre flexbox tenga un align, los elementos que tengan esta propiedad
+    se alinearán como se especifique*/
+
+    flex-shrink: 0; /*Para que los elementos no reduzcan o no su tamaño si no "Caben" (Este valor es entre 0 y 1)*/
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+.Box-hija{
+
+    width: 70px;
+    height: 70px;
+    border: 2px solid #75F986;
+    margin: 5px;
+    flex-shrink: 0;
+}
+
+.Footer{
+
+    background-color: #75F986;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.Footer img{
+
+    vertical-align: middle;/*El texto se alinea con la imagen(Hay más valores)
+    para que quedena a la misma altura
+    Esto ocurre al juntar texto con otros elementos en el html*/
+    
+}
+
+.Footer a{
+
+    color: red;
+    text-decoration: none;/*No subrayado*/
+}
+
+.Title-Experiencia{
+    color:#FF0080;
+    text-align: center;
+    background: #75F986;
+}
+
+#Experiencia{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 90px;
+    background: #FE2E2E;    
+}
+
+.Experiencie{
+    border: 8px solid  #75F986;
+    border-radius: 10px;
+    margin: 10px;     
+    width: 480px;
+    flex-shrink: 0; /*Para que los elementos no reduzcan o no su tamaño si no "Caben" (Este valor es entre 0 y 1)*/
+    overflow: hidden;
+    background: skyblue;      
+}
+
+.Experiencie-Image-Container, .Experiencie-Image-Container img{
+
+    width: inherit; /*Es un experimento que hice*/    
+}
+
+.Experiencie img{
+
+    object-fit: cover;/*Para que las imagenes no se distorsionen mucho*/
+}
+
+.Event-Text{/*Event es la misma sección de experiencia*/
+
+    margin: 20px;
+    background-color: #CEF6F5;
+    margin-top: -40px;      /* para superponer elementos encima de otros*/
+    position: relative;     /*Combinado con este*/
+    padding: 20px;
+    text-align: center; /*Alinear el texto*/
+}
+
+.Event-Title{
+    text-align: center;
+}
+.Event-Description{
+    text-align: left;
+}
+
+.Experiencie .Link{
+
+    text-decoration: none;
+    color: #056fff;
+    border: 1px solid #056fff;
+    padding: 5px 20px;
+    border-radius: 5px;    
+}
+
+.Contact{
+    background-color: #056fff;
+    color: white;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    
+}
+
+.Social{
+    border: 4px solid #FF0080;
+    margin: 0;
+    margin-left: 50px;    
+}
+
+.Social-Link{
+
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    display: inline-block;
+    background-size: 50px 50px;  
+    margin: 0px 10px;
+    /*se puso aquí para no repetirlo
+    en cada a "ancla"*/
+    
+}
+ 
+/*El punto es para indicar que afectará a las etiquetas que tengan
+la clase Social-link y Twitter (ver Html para comprender mejor)*/
+.Social-Link.Twitter
+{
+    background-image: url('../Imagenes/twitter.png');    
+
+}
+
+.Social-Link.Facebook{
+
+    background-image: url('../Imagenes/Face.png');
+}
+
+.Social-Link.GitHub{
+
+    background-image: url('../Imagenes/git.png');
+}
+
+.Social-Link.Instagram{
+
+    background-image: url('../Imagenes/Insta.png');
+}
+
+#Email{
+
+    border-color: gray;
+    border-style: solid;
+    padding: 5px 20px 5px 25px;/*para agrandar por dentro el input ("TextField")*/
+    background-image: url('../Imagenes/mensaje.png');
+    background-size: 20px 20px;/*Tamaño del icono de mensaje*/
+    background-repeat: no-repeat;
+    background-position-y: center;
+     /*sirve para alinear el icono del mensaje en el eje de las y*/
+     /*dentro del input para enviar el email*/
+    background-position-x: 5px;
+    /*mover el icono 5 px a la derecha en el eje de las x*/
+    
+}
+
+.form-email button{
+
+    display: block;
+    margin-top: 10px;
+    background: transparent;
+    color: white;
+    padding: 5px 30px;
+    border: 2px solid rgb(43, 241, 36);
+    border-radius: 5px;
+    width: 100px;
+    margin-top: 2px
+
+}
+
+.form-email h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

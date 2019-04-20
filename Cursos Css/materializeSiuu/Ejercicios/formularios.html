@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <div class="section container">
+        <div class="row">
+            <!--Formulario-->
+            <form action="col s12">
+                <div class="row"> <!--sistema de columnas dentro del formulario-->
+                    <div class="row card-panel">
+                        <div class="input-field col s6"><!--Nombres--> <!--validate y required para validar los campos-->
+                            <input type="text" placeholder="Ingresa tus nombres" id="nombres" class="validate" required>
+                            <label for="nombres">Nombres:</label>
+                        </div>
+                        <!--Apellidos-->
+                        <div class="input-field col s6">
+                                <input type="text" id="apellidos" class="validate" required><!--Si le quitamos el placeholder hace otro efecto-->
+                                <label for="apellidos">Apellidos:</label>
+                         </div>
+                         <!--dirección-->
+                        <div class="input-field col s12">
+                            <input type="text" id="direccion" class="validate" required>
+                            <label for="direccion">Dirección:</label>
+                        </div>
+                        <!--Telefono-->
+                        <div class="input-field col s4">
+                                <!--Iconos a un lado-->
+                                <i class="material-icons prefix">phone</i>
+                                <input type="text" id="telefono" class="validate" required>
+                                <label for="telefono">Telefono:</label>
+                        </div>
+                        <!--Email-->
+                        <div class="input-field col s8">
+                                <input type="email" id="email" class="validate" required>
+                                <label for="email">Email:</label>
+                                <span class="helper-text" data-error="Direccion invalida" data-success="right">Correo</span>
+                        </div>
+
+                        <!---------->
+                        <button class="btn" type="submit">Enviar</button>                        
+
+                    </div>                    
+                </div>           
+
+            </form>
+
+
+        </div>
+    </div>
+    
+
+        <script src="../js/jquery-3.3.1.min.js"></script>
+        <script src="../js/materialize.js"></script>
+        <script src="../js/combo.js"></script>        
+</body>
+</html>

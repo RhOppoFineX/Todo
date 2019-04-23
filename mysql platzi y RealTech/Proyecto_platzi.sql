@@ -152,7 +152,7 @@ WHERE a.Id_author BETWEEN 1 and 5 order by a.Name asc; --Ascendete valor por def
 SELECT a.Id_author, a.Name, a.Natonality, b.Title FROM authors as a 
 LEFT JOIN books as b ON b.Id_author = a.Id_author
 WHERE a.Id_author BETWEEN 1 and 5 order by a.Name asc;
---EN esta consulta un dato de una columna es uno debido a que ese autor no tiene libros registrados
+--EN esta consulta un dato de una columna es null debido a que ese autor no tiene libros registrados
 
 --Nombre de autores y cuantos libros tiene cada uno
 
@@ -165,10 +165,25 @@ Order By a.Name asc;
 -- Group By: Dato unico que no se va a repetir
 -- es como decir "estos registros se agruparan por nacionalidad en este ejemplo"
 --Cada vez que encuentre un registro (author) con la misma nacionalidad lo contara o agrupara para dicha nacionalidad.
--- Y cada ves que lo encuentre sumara uno lo contará en la columna count
+-- Y cada ves que lo encuentre sumara uno, lo contará en la columna count
 SELECT a.Natonality, count(Id_author) FROM authors as a
-Group by a.Natonality 
+Group by a.Natonality
 
+--CINCO CASOS DE NEGOCIO
+
+--1 ¿Que nacionalidades hay? 
+
+Select DISTINCT Natonality FROM authors Order By Natonality;
+--Al utilzar el distinct nos trae las diferentes nacionalidades
+
+--2 ¿ Cuántos escritores hay de cada nacionalidad ?
+
+SELECT Natonality, count(Id_author) as escritores FROM authors WHERE Natonality IS NOT NULL and Natonality NOT IN ('RUS', 'AUT')
+Group By Natonality Order By escritores desc, Natonality asc;
+--El Count es una de las funciones que necesita agruparse
+--Order by en este caso por la cantidad de autores del mismo país
+-- En este caso en el order by ponemos dos condiciones de ordenamiento 
+--Primero Ordenara por cantidad de autores y luego por orden alfabetico a las nacionalidades que presenten el mismo número de autores 
 
 
 

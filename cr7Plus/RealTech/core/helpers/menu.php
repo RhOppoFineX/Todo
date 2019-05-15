@@ -27,13 +27,13 @@
         <!--menú-->
         <ul class="right">
           <!--Registrarse-->
-          <li><a href="../../views/public/formularios.html"> Registrarse
+          <li><a href="../../views/public/formularios.php"> Registrarse
               <i class="large material-icons left">assignment</i>
               <!--Icono-->
             </a></li>
 
           <!--Login-->
-          <li><a href="../../views/public/login.html">Login
+          <li><a href="../../views/public/login.php">Login
               <i class="large material-icons left">account_circle</i>
             </a></li>
 
@@ -54,9 +54,9 @@
 
   <!--Desplegable-->
   <ul id="Id_drop" class="dropdown-content">
-    <li><a href="../../views/public/gadgets.html">Gadgets</a></li>
+    <li><a href="../../views/public/gadgets.php">Gadgets</a></li>
     <li class="divider"></li>
-    <li><a href="../../views/public/componentes.html">Componentes</a></li>
+    <li><a href="../../views/public/componentes.php">Componentes</a></li>
     <li class="divider"></li>
-    <li><a href="../../views/public/carrito.html">Carrito</a></li>
+    <li><a href="../../views/public/carrito.php">Carrito</a></li>
   </ul>

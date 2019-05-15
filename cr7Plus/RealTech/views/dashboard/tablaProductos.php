@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Tabla Productos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">       
-    <link rel="stylesheet" href="../../css/materialize.css">
-    <link rel="stylesheet" href="../../css/icons.css">
+    <link rel="stylesheet" href="../../resources/css/materialize.css">
+    <link rel="stylesheet" href="../../resources/css/icons.css">
     
 </head>
 <body>
 
     <!--Desplegable-->
     <ul id="Id_drop" class="dropdown-content">
-            <li><a href="../admin/tablaProductos.html">Crud Productos</a></li>
+            <li><a href="tablaProductos.php">Crud Productos</a></li>
             <li class="divider"></li>
-            <li><a href="../admin/tablaClientes.html">Crud Cliente</a></li>
+            <li><a href="tablaClientes.php">Crud Cliente</a></li>
             <li class="divider"></li>
             <li><a href="#">Carrito</a></li>
     </ul>
@@ -33,12 +33,12 @@
                                 <!--menú-->
                                 <ul class="right">
                                     <!--Registrars nuevo-->
-                                    <li><a href="../admin/agregarAdmin.html"> Nuevo admin                      
+                                    <li><a href="agregarAdmin.php"> Nuevo admin                      
                                      <i class="large material-icons left">assignment</i> <!--Icono-->    
                                     </a></li>
             
                                     <!--Cerrar Sesión-->
-                                    <li><a href="../../../views/public/index.html">Cerrar Sesión 
+                                    <li><a href="../public/index.php">Cerrar Sesión 
                                     <i class="large material-icons left">account_circle</i>   
                                     </a></li>
                                     
@@ -80,11 +80,11 @@
             </div><!--fin de Barra-->            
 
             <div class="col s4">
-                <a class="waves-effect waves-light btn-large blue" href="../admin/Graficas/index.html"><i class="material-icons right">assessment</i>Estadisticas</a>                
+                <a class="waves-effect waves-light btn-large blue" href="Graficas/index.php"><i class="material-icons right">assessment</i>Estadisticas</a>                
             </div>
 
             <div class="col s2">
-                    <a class="btn-floating btn-large waves-effect waves-light purple" href="../admin/agregarProductos.html"><i class="material-icons">add</i></a>
+                    <a class="btn-floating btn-large waves-effect waves-light purple" href="agregarProductos.php"><i class="material-icons">add</i></a>
             </div>
 
             <br>
@@ -108,7 +108,7 @@
                         <td>$329.99</td>
                         <td><a class="btn-floating btn waves-effect waves-light orange"><i class="material-icons">edit</i></a></td>
                         <td><a class="btn-floating btn waves-effect waves-light red modal-trigger tooltipped" href="#modal3"><i class="material-icons">delete</i></a></td>
-                        <td><a class="btn-floating btn waves-effect waves-light green" href="../admin/Graficas/index.html"><i class="material-icons">assessment</i></a></td>
+                        <td><a class="btn-floating btn waves-effect waves-light green" href="Graficas/index.php"><i class="material-icons">assessment</i></a></td>
                     </tr>
                     <tr>
                         <td>2</td>
@@ -117,7 +117,7 @@
                         <td>$39.99</td>
                         <td><a class="btn-floating btn waves-effect waves-light orange"><i class="material-icons">edit</i></a></td>
                         <td><a class="btn-floating btn waves-effect waves-light red modal-trigger tooltipped" href="#modal3"><i class="material-icons">delete</i></a></td>
-                        <td><a class="btn-floating btn waves-effect waves-light green" href="../admin/Graficas/index.html"><i class="material-icons">assessment</i></a></td>
+                        <td><a class="btn-floating btn waves-effect waves-light green" href="Graficas/index.php"><i class="material-icons">assessment</i></a></td>
                     </tr>
 
                     <tr>
@@ -127,7 +127,7 @@
                         <td>$20.00</td>
                         <td><a class="btn-floating btn waves-effect waves-light orange"><i class="material-icons">edit</i></a></td>
                         <td><a class="btn-floating btn waves-effect waves-light red modal-trigger tooltipped" href="#modal3"><i class="material-icons">delete</i></a></td>
-                        <td><a class="btn-floating btn waves-effect waves-light green" href="../admin/Graficas/index.html"><i class="material-icons">assessment</i></a></td>
+                        <td><a class="btn-floating btn waves-effect waves-light green" href="Graficas/index.php"><i class="material-icons">assessment</i></a></td>
                     </tr>
 
                     <tr>
@@ -137,7 +137,7 @@
                         <td>$250.00</td>
                         <td><a class="btn-floating btn waves-effect waves-light orange"><i class="material-icons">edit</i></a></td>
                         <td><a class="btn-floating btn waves-effect waves-light red modal-trigger tooltipped" href="#modal3"><i class="material-icons">delete</i></a></td>
-                        <td><a class="btn-floating btn waves-effect waves-light green" href="../admin/Graficas/index.html"><i class="material-icons">assessment</i></a></td>
+                        <td><a class="btn-floating btn waves-effect waves-light green" href="Graficas/index.php"><i class="material-icons">assessment</i></a></td>
                     </tr>
                 </tbody>
             </table>
@@ -153,7 +153,7 @@
                            
     
                 <div class="col s4">
-                    <a class="waves-effect waves-light btn-large blue" href="../admin/Graficas/index.html"><i class="material-icons right">assessment</i>Estadisticas</a>                
+                    <a class="waves-effect waves-light btn-large blue" href="Graficas/index.php"><i class="material-icons right">assessment</i>Estadisticas</a>                
                 </div>    
                 
     
@@ -174,7 +174,7 @@
                             
                             <td><a class="btn-floating btn waves-effect waves-light orange"><i class="material-icons">edit</i></a></td>
                             <td><a class="btn-floating btn waves-effect waves-light red modal-trigger tooltipped" href="#modal3"><i class="material-icons">delete</i></a></td>
-                            <td><a class="btn-floating btn waves-effect waves-light green" href="../admin/Graficas/index.html"><i class="material-icons">assessment</i></a></td>
+                            <td><a class="btn-floating btn waves-effect waves-light green" href="Graficas/index.php"><i class="material-icons">assessment</i></a></td>
                         </tr>
                         <tr>
                             <td>2</td>
@@ -183,7 +183,7 @@
                             
                             <td><a class="btn-floating btn waves-effect waves-light orange"><i class="material-icons">edit</i></a></td>
                             <td><a class="btn-floating btn waves-effect waves-light red modal-trigger tooltipped" href="#modal3"><i class="material-icons">delete</i></a></td>
-                            <td><a class="btn-floating btn waves-effect waves-light green" href="../admin/Graficas/index.html"><i class="material-icons">assessment</i></a></td>
+                            <td><a class="btn-floating btn waves-effect waves-light green" href="Graficas/index.php"><i class="material-icons">assessment</i></a></td>
                         </tr>
     
                         <tr>
@@ -193,7 +193,7 @@
                             
                             <td><a class="btn-floating btn waves-effect waves-light orange"><i class="material-icons">edit</i></a></td>
                             <td><a class="btn-floating btn waves-effect waves-light red modal-trigger tooltipped" href="#modal3"><i class="material-icons">delete</i></a></td>
-                            <td><a class="btn-floating btn waves-effect waves-light green" href="../admin/Graficas/index.html"><i class="material-icons">assessment</i></a></td>
+                            <td><a class="btn-floating btn waves-effect waves-light green" href="Graficas/index.php"><i class="material-icons">assessment</i></a></td>
                         </tr>
     
                         <tr>
@@ -203,7 +203,7 @@
                             
                             <td><a class="btn-floating btn waves-effect waves-light orange"><i class="material-icons">edit</i></a></td>
                             <td><a class="btn-floating btn waves-effect waves-light red modal-trigger tooltipped" href="#modal3"><i class="material-icons">delete</i></a></td>
-                            <td><a class="btn-floating btn waves-effect waves-light green" href="../admin/Graficas/index.html"><i class="material-icons">assessment</i></a></td>
+                            <td><a class="btn-floating btn waves-effect waves-light green" href="Graficas/index.php"><i class="material-icons">assessment</i></a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -221,9 +221,9 @@
             </div>
         </div>
         
-    <script src="../../js/jquery-3.3.1.min.js"></script>
-    <script src="../../js/materialize.js"></script>
-    <script src="../../js/nav.js"></script>
-    <script src="../../js/modal.js"></script>
+    <script src="../../resources/js/jquery-3.3.1.min.js"></script>
+    <script src="../../resources/js/materialize.js"></script>
+    <script src="../../resources/js/nav.js"></script>
+    <script src="../../resources/js/modal.js"></script>
 </body>
 </html>

@@ -48,7 +48,7 @@
                         <br>
 
                         <div class="form-field center">
-                            <a class="btn-large blue" href="../../resources/pages/admin/tablaProductos.html">Iniciar
+                            <a class="btn-large blue" href="tablaProductos.php">Iniciar
                                 Sesión</a>
                         </div> <br>
 

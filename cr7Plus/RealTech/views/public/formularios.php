@@ -5,59 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Resgistro</title>
-    <link rel="stylesheet" href="../../css/materialize.css">
-    <link rel="stylesheet" href="../../css/icons.css">    
+    <link rel="stylesheet" href="../../resources/css/materialize.css">
+    <link rel="stylesheet" href="../../resources/css/icons.css">    
 </head>
 <body>
 
     <!--Nav-->
               
-        <!--Siempre fijo arriba-->          
-            
-            <div class="navbar-fixed">
-                    <nav class="indigo accent-3">
-                        <div class="nav-wrapper container">                    
-                                
-                                    <!--Logo-->
-                                    <a href="#" class="brand-logo left"> RealTech
-                                    <i class="large material-icons left">usb</i>   
-                                    </a>                         
-                                
-                                
-                                    <!--menú-->
-                                    <ul class="right">
-                                        <!--Registrarse-->
-                                        <li><a href="../public/formularios.html"> Registrarse                        
-                                         <i class="large material-icons left">assignment</i> <!--Icono-->    
-                                        </a></li>
-                
-                                        <!--Login-->
-                                        <li><a href="../public/login.html">Login
-                                        <i class="large material-icons left">account_circle</i>   
-                                        </a></li>
-                                        
-                                        
-                                        <li>
-                                            <a href="#" class="dropdown-trigger" data-target="Id_drop"> Productos
-                                             <i class="material-icons right">arrow_drop_down</i>
-                                             <i class="material-icons left">add_shopping_cart</i>    
-                                            </a>
-                                        </li>                    
-                                    </ul>
-                                   <!--menú-->                        
-                            
-                        </div>
-                    </nav>
-                </div>
-
-        <!--Desplegable-->
-        <ul id="Id_drop" class="dropdown-content">
-                <li><a href="gadgets.html">Gadgets</a></li>
-                <li class="divider"></li>
-                <li><a href="componentes.html">Componentes</a></li>
-                <li class="divider"></li>
-                <li><a href="ShoopingCart/index.html">Carrito</a></li>
-        </ul>        
+<?php
+    require_once "../../core/helpers/menu.php";
+?>        
 
     <div class="section container">
         <h1 class="blue-text center"> Formulario de Registro</h1>
@@ -173,16 +130,19 @@
 
         </div>
     </div>
+    <?php
+        require_once "../../core/helpers/footer.php";
+    ?>  
     
     <!--Ponerle el footer aquí como dijo carranzey-->
 
-        <script src="../../js/jquery-3.3.1.min.js"></script>
-        <script src="../../js/materialize.js"></script>
-        <script src="../../js/combobox.js"></script>
-        <script src="../../js/tooltiped.js"></script>
-        <script src="../../js/modal.js"></script>
-        <script src="../../js/calendario.js"></script>
-        <script src="../../js/nav.js"></script>
+        <script src="../../resources/js/jquery-3.3.1.min.js"></script>
+        <script src="../../resources/js/materialize.js"></script>
+        <script src="../../resources/js/combobox.js"></script>
+        <script src="../../resources/js/tooltiped.js"></script>
+        <script src="../../resources/js/modal.js"></script>
+        <script src="../../resources/js/calendario.js"></script>
+        <script src="../../resources/js/nav.js"></script>
                
 </body>
 </html>

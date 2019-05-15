@@ -6,76 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Gadgets</title>
-  <link rel="stylesheet" href="../../css/materialize.css">
-  <link rel="stylesheet" href="../../css/icons.css">
+  <link rel="stylesheet" href="../../resources/css/materialize.css">
+  <link rel="stylesheet" href="../../resources/css/icons.css">
 </head>
 
 <body>
 
-  <!--Nav-->
-
-  <!--Barra de Busqueda-->
-  <div class="navbar-fixed">
-    <nav class="indigo accent-3">
-      <div class="nav-wrapper">
-        <form>
-          <div class="input-field">
-            <input id="search" type="search" required>
-            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-            <i class="material-icons">close</i>
-          </div>
-        </form>
-      </div>
-    </nav>
-  </div>
-  <!--Siempre fijo arriba-->
-
-  <div class="navbar-fixed">
-    <nav class="indigo accent-3">
-      <div class="nav-wrapper container">
-
-        <!--Logo-->
-        <a href="#" class="brand-logo left"> RealTech
-          <i class="large material-icons left">usb</i>
-        </a>
-
-
-        <!--menú-->
-        <ul class="right">
-          <!--Registrarse-->
-          <li><a href="../public/formularios.html"> Registrarse
-              <i class="large material-icons left">assignment</i>
-              <!--Icono-->
-            </a></li>
-
-          <!--Login-->
-          <li><a href="../public/login.html">Login
-              <i class="large material-icons left">account_circle</i>
-            </a></li>
-
-
-          <li>
-            <a href="#" class="dropdown-trigger" data-target="Id_drop"> Productos
-              <i class="material-icons right">arrow_drop_down</i>
-              <i class="material-icons left">add_shopping_cart</i>
-            </a>
-          </li>
-        </ul>
-        <!--menú-->
-
-      </div>
-    </nav>
-  </div>
-
-
-  <!--Desplegable-->
-  <ul id="Id_drop" class="dropdown-content">
-    <li><a href="#">Gadgets</a></li>
-    <li class="divider"></li>
-    <li><a href="componentes.html">Componentes</a></li>
-    <li class="divider"></li>
-    <li><a href="ShoopingCart/index.html">Carrito</a></li>
-  </ul>
+<?php
+    require_once "../../core/helpers/menu.php";
+?>
 
   <!--Promociones y nuevos Productos-->
   <div class="section">
@@ -122,7 +61,7 @@
           <div class="card">
             <div class="card-image waves-effect waves-block waves-blue">
               <img class="activator responsive-img"
-                src="../../../resources/img/PERIFERICOS/PERIFERICOS-PC/mouse-inalambrico.PNG">
+                src="../../resources/img/PERIFERICOS/PERIFERICOS-PC/mouse-inalambrico.PNG">
             </div>
             <div class="card-content">
               <span class="card-title activator pink-text text-darken-4">Mouse inalambrico<i
@@ -150,7 +89,7 @@
           <div class="small card">
             <div class="card-image waves-effect waves-block waves-blue">
               <img class="activator responsive-img"
-                src="../../../resources/img/PERIFERICOS/PERIFERICOS-CEL/tripode.jpg">
+                src="../../resources/img/PERIFERICOS/PERIFERICOS-CEL/tripode.jpg">
             </div>
             <div class="card-content">
               <span class="card-title activator pink-text text-darken-4">Tripode<i
@@ -178,7 +117,7 @@
           <div class="card">
             <div class="card-image waves-effect waves-block waves-blue">
               <img class="activator responsive-img"
-                src="../../../resources/img/PERIFERICOS/PERIFERICOS-PC/bocinas-pc.PNG">
+                src="../../resources/img/PERIFERICOS/PERIFERICOS-PC/bocinas-pc.PNG">
             </div>
             <div class="card-content">
               <span class="card-title activator pink-text text-darken-4">bocinas para pc<i
@@ -206,7 +145,7 @@
           <div class="small card">
             <div class="card-image waves-effect waves-block waves-blue">
               <img class="activator responsive-img"
-                src="../../../resources/img/PERIFERICOS/PERIFERICOS-PC/tecladoGamer.jpg">
+                src="../../resources/img/PERIFERICOS/PERIFERICOS-PC/tecladoGamer.jpg">
             </div>
             <div class="card-content">
               <span class="card-title activator pink-text text-darken-4">tecladoGamer<i
@@ -230,7 +169,7 @@
           <div class="small card">
             <div class="card-image waves-effect waves-block waves-blue">
               <img class="activator responsive-img"
-                src="../../../resources/img/COMPONENTES/COMPONENTES-CEL/memoria-cel.PNG">
+                src="../../resources/img/COMPONENTES/COMPONENTES-CEL/memoria-cel.PNG">
             </div>
             <div class="card-content">
               <span class="card-title activator pink-text text-darken-4">Memorias SD<i
@@ -258,7 +197,7 @@
           <div class="small card">
             <div class="card-image waves-effect waves-block waves-blue">
               <img class="activator responsive-img"
-                src="../../../resources/img/COMPONENTES/COMPONENTES-CEL/bateria-cel.PNG">
+                src="../../resources/img/COMPONENTES/COMPONENTES-CEL/bateria-cel.PNG">
             </div>
             <div class="card-content">
               <span class="card-title activator pink-text text-darken-4">Baterías<i
@@ -285,7 +224,7 @@
           <div class="small card">
             <div class="card-image waves-effect waves-block waves-blue">
               <img class="activator responsive-img"
-                src="../../../resources/img/COMPONENTES/COMPONENTES-CEL/PANTALLA-CEL.PNG">
+                src="../../resources/img/COMPONENTES/COMPONENTES-CEL/PANTALLA-CEL.PNG">
             </div>
             <div class="card-content">
               <span class="card-title activator pink-text text-darken-4">Pantallas<i
@@ -312,7 +251,7 @@
           <div class="small card">
             <div class="card-image waves-effect waves-block waves-blue">
               <img class="activator responsive-img"
-                src="../../../resources/img/COMPONENTES/COMPONENTES-PC/PROCESADOR-PC.PNG">
+                src="../../resources/img/COMPONENTES/COMPONENTES-PC/PROCESADOR-PC.PNG">
             </div>
             <div class="card-content">
               <span class="card-title activator pink-text text-darken-4">Intel core i5<i
@@ -342,40 +281,16 @@
 
 
   <!--Footer-->
-  <footer class="page-footer indigo accent-3">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Contenido de pie de página</h5>
-          <p class="grey-text text-lighten-4">Dejanos tu opnion de nuestros srevicio, la tomaremos en cuenta
-            para mejorar.
-          </p>
-        </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-        © 2019 RealTech Todos los derechos reservados
-        <a class="grey-text text-lighten-4 right" href="#!">Más Links</a>
-      </div>
-    </div>
-  </footer>
+  <?php 
+    require_once '../../core/helpers/footer.php';
+  ?>
 
 
 
-  <script src="../../js/jquery-3.3.1.min.js"></script>
-  <script src="../../js/materialize.js"></script>
-  <script src="../../js/nav.js"></script>
-  <script src="../../js/autocomplete.js"></script>
+  <script src="../../resources/js/jquery-3.3.1.min.js"></script>
+  <script src="../../resources/js/materialize.js"></script>
+  <script src="../../resources/js/nav.js"></script>
+  <script src="../../resources/js/autocomplete.js"></script>
   <script>
     function alerta() {
       var toastHTML = '<span>Articulo Agregado al carrito</span><button class="btn-flat toast-action">Cancelar</button>';

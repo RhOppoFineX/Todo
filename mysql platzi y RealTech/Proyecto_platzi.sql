@@ -185,10 +185,14 @@ Group By Natonality Order By escritores desc, Natonality asc;
 -- En este caso en el order by ponemos dos condiciones de ordenamiento 
 --Primero Ordenara por cantidad de autores y luego por orden alfabetico a las nacionalidades que presenten el mismo número de autores 
 
+show tables like '%colores%';
+
+--Que es le willcard---
 
 
+-- tablas MYSIAM 
 
-
+-- TO_DAYS(fecha) 
 
 
 

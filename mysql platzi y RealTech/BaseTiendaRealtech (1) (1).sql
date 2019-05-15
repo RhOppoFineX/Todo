@@ -69,15 +69,16 @@ create table Empleado(
 create table Producto (
     Id_producto int unsigned primary key not null Auto_Increment,
     Id_categoria int unsigned not null,
+    Nombre_producto VARCHAR(50) NOT NULL,
     Descripcion varchar(500) not null,
     Precio double(6,2) not null,
     Cantidad int not null,
     Id_garantia int unsigned not null,
-    Id_estado int unsigned not null,
+    Estado_producto tinyint(1) unsigned not null DEFAULT 1,
+    Imagen_producto VARCHAR(100) NULL,
     Id_marca int unsigned not null,
     foreign key (Id_categoria) references Categoria(Id_categoria),
-    foreign key (Id_garantia) references Garantia(Id_garantia),
-    foreign key (Id_estado) references Estado(Id_estado),
+    foreign key (Id_garantia) references Garantia(Id_garantia),    
     foreign key (Id_marca) references Marca(Id_marca)
 );
 
@@ -214,17 +215,17 @@ INSERT INTO empleado VALUES
 -- Volcado de datos para la tabla producto
 --
 
-INSERT INTO producto (Id_categoria, Descripcion, Precio, Cantidad, Id_garantia, Id_estado, Id_marca) VALUES 
-(2, 'Procesador intel i5: 7600k 4.20Ghz.', 240.00, 10, 1, 1, 1),
-(2, 'Tarjeta grafica GTX 750ti: 2GB GDDR5.', 160.00, 5, 1, 1, 1),
-(2, 'Disco duro San Disk SSD PLUS: 1TB SATA III 6GB/s', 110.00, 12, 2, 1, 1),
-(2, 'Fuente de poder EVGA 500 W1', 40.00, 5, 1, 1, 1),
-(2, 'Memoria ram Kingston HyperX: 8GB 2666MHz DDR4.', 44.00, 10, 2, 1, 1),
-(1, 'Teclado mecanico Redragon Kumara k552: Switches Outemu blue.', 40.00, 15, 2, 1, 1),
-(1, 'Mouse Wireless Rechargeable: DPI ajustable para Windows y Mac.', 11.00, 20, 2, 1, 1),
-(1, 'Bocinas para pc ARVICKA USB', 14.00, 20, 2, 1, 1),
-(1, 'Mouse pad MROCO Ergonomico', 6.00, 20, 2, 1, 1),
-(2, 'Placa madre Asus LGA1151: DDR4 HDMI, DVI Y VGA.', 70.00, 10, 1, 1, 1);
+INSERT INTO producto (Id_categoria, Descripcion, Precio, Cantidad, Id_garantia, Estado_producto, Id_marca, Nombre_producto) VALUES 
+(2, 'Procesador intel i5: 7600k 4.20Ghz.', 240.00, 10, 1, 1, 1, 'Procesador'),
+(2, 'Tarjeta grafica GTX 750ti: 2GB GDDR5.', 160.00, 5, 1, 1, 1, 'Tarjeta grafica'),
+(2, 'Disco duro San Disk SSD PLUS: 1TB SATA III 6GB/s', 110.00, 12, 2, 1, 1, 'Disco duro'),
+(2, 'Fuente de poder EVGA 500 W1', 40.00, 5, 1, 1, 1, 'Fuente de poder'),
+(2, 'Memoria ram Kingston HyperX: 8GB 2666MHz DDR4.', 44.00, 10, 2, 1, 1, 'Memoria ram Kingston'),
+(1, 'Teclado mecanico Redragon Kumara k552: Switches Outemu blue.', 40.00, 15, 2, 1, 1, 'Teclado mecanico Redragon'),
+(1, 'Mouse Wireless Rechargeable: DPI ajustable para Windows y Mac.', 11.00, 20, 2, 1, 1, 'Mouse Wireless Rechargeable'),
+(1, 'Bocinas para pc ARVICKA USB', 14.00, 20, 2, 1, 1, 'Bocinas para pc'),
+(1, 'Mouse pad MROCO Ergonomico', 6.00, 20, 2, 1, 1, 'Mouse pad MROCO'),
+(2, 'Placa madre Asus LGA1151: DDR4 HDMI, DVI Y VGA.', 70.00, 10, 1, 1, 1, 'Placa madre Asus');
 
 --
 -- Volcado de datos para la tabla pedido

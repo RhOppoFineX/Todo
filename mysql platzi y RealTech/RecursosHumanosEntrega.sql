@@ -1,11 +1,11 @@
 Create Database RecursosHumanos;
 use RecursosHumanos;
-
+--Topo
 create table Tipo_usuario(
     Id_tipo_usuario Integer Unsigned PRIMARY KEY NOT NULL AUTO_INCREMENT,
     Tipo_usuario varchar(20) NOT NULL
 );
-
+--Topo
 Create Table Usuario(
     Id_usuario Integer Unsigned PRIMARY KEY NOT NULL AUTO_INCREMENT,
     Nombres varchar(40) NOT NULL,
@@ -14,85 +14,86 @@ Create Table Usuario(
     Id_tipo_usuario Integer Unsigned NOT NULL,
     FOREIGN KEY (Id_tipo_usuario) REFERENCES Tipo_usuario(Id_tipo_usuario)
 );
-
+--Topo
 Create Table Area(
     Id_area Integer Unsigned PRIMARY KEY NOT NULL AUTO_INCREMENT,
     Area varchar(25) NOT NULL
 );
-
+--Topo
 Create Table Puesto(
     Id_puesto Integer Unsigned PRIMARY KEY NOT NULL AUTO_INCREMENT,
     Puesto varchar(25) NOT NULL
 );
 
-create table Identidad(
-    Id_identidad integer Unsigned PRIMARY KEY NOT NULL,
-    Documento varchar(20) NOT NULL
-);
+-- create table Identidad(
+--     Id_identidad integer Unsigned PRIMARY KEY NOT NULL,
+--     Documento varchar(20) NOT NULL
+-- );
 
+--Joel
 Create Table Nacionalidad (
     Id_nacionalidad Integer Unsigned PRIMARY KEY NOT NULL AUTO_INCREMENT,
     Nacionalidad varchar (25) NOT NULL
 );
-
+--Joel
 Create Table Nivel_idioma(
     Id_nivel_idioma Integer Unsigned PRIMARY KEY NOT NULL AUTO_INCREMENT,
     Nivel varchar (15) NOT NULL
 );
-
+--Joel
 Create Table Idioma(
     Id_idioma Integer Unsigned PRIMARY KEY NOT NULL AUTO_INCREMENT,
     Idioma varchar(15) NOT NULL,
     Id_nivel_idioma Integer Unsigned NOT NULL,
     FOREIGN KEY (Id_nivel_idioma) REFERENCES Nivel_idioma(Id_nivel_idioma) 
 );
-
+--Cristian
 Create Table Tipo_equipo (
     Id_tipo_equipo Integer Unsigned PRIMARY KEY NOT NULL AUTO_INCREMENT,
     Tipo_equipo varchar(50) NOT NULL
 );
-
+--Cristian
 Create Table Equipo (
     Id_equipo Integer Unsigned PRIMARY KEY NOT NULL AUTO_INCREMENT,
     Nombre_equipo varchar(50) NOT NULL,
     Id_tipo_equipo Integer Unsigned NOT NULL,
     FOREIGN KEY (Id_tipo_equipo) REFERENCES Tipo_equipo(Id_tipo_equipo)
 ); 
-
+--Joel
 create table Departamento(
     Id_departamento Integer Unsigned PRIMARY KEY NOT NULL,
     Departamento varchar(30) NOT NULL,
     Id_nacionalidad Integer Unsigned NOT NULL,
     FOREIGN KEY (Id_nacionalidad) REFERENCES Nacionalidad(Id_nacionalidad)
 );
-
+--Joel
 create table Municipio(
     Id_municipio Integer Unsigned PRIMARY KEY NOT NULL,
     Municipio varchar(30) NOT NULL,
     Id_departamento Integer Unsigned NOT NULL,
     FOREIGN KEY (Id_departamento) REFERENCES Departamento(Id_departamento)
 );
-
+--Cristian
 Create Table Estado_civil(
     Id_estado_civil Integer Unsigned PRIMARY KEY NOT NULL,
     Estado_civil VARCHAR(20) NOT NULL
 );
-
+--Topo
 Create Table Religion (
     Id_religion Integer Unsigned PRIMARY KEY NOT NULL,
     Religion varchar(25) NOT NULL
 );
-
+--Cristian esta tabla es categoria de educación
 Create Table Categoria (
     Id_categoria Integer Unsigned PRIMARY KEY NOT NULL,
     Categoria varchar(25) NOT NULL
 );
-
+--Cristian
 Create Table Parentesco(
     Id_parentesco Integer Unsigned PRIMARY KEY NOT NULL AUTO_INCREMENT,
     Parentesco varchar(50) NOT NULL
 );
-
+--Cr7
 create table Datos_identificacion(
     Id_datos integer Unsigned PRIMARY KEY NOT NULL,    
     Num_documento varchar(10) NOT NULL,
@@ -106,10 +107,10 @@ create table Datos_identificacion(
     Num_ISSS varchar(20) NOT NULL UNIQUE,
     AFP varchar(20) NOT NULL UNIQUE,
     NUP varchar(20) NOT NULL,
-    FOREIGN KEY (Id_identidad) REFERENCES Identidad (Id_identidad),
+    Tipo_documento TINYINT(1) NOT NULL,
     FOREIGN KEY (Id_estado_civil) REFERENCES Estado_civil (Id_estado_civil)
 );
-
+--Cr7
 Create Table Colaborador(
     Id_Colaborador Integer Unsigned PRIMARY KEY NOT NULL AUTO_INCREMENT,
     Nombres varchar(50) NOT NULL,
@@ -132,7 +133,7 @@ Create Table Colaborador(
     FOREIGN KEY (Id_datos) REFERENCES Datos_identificacion(Id_datos),
     FOREIGN KEY (Id_municipio) REFERENCES Municipio(Id_municipio)      
 );
-
+--Joel
 Create Table Detalle_idioma (
     Id_detalle_idioma Integer Unsigned PRIMARY KEY NOT NULL AUTO_INCREMENT,
     Id_idioma Integer Unsigned NOT NULL,
@@ -140,7 +141,7 @@ Create Table Detalle_idioma (
     FOREIGN KEY (Id_idioma) REFERENCES Idioma(Id_idioma),
     FOREIGN KEY (Id_Colaborador) REFERENCES Colaborador(Id_Colaborador) 
 );
-
+--Cristian
 Create Table Educacion (
     Id_educacion Integer Unsigned PRIMARY KEY NOT NULL AUTO_INCREMENT,
     Id_categoria Integer Unsigned NOT NULL,
@@ -150,7 +151,7 @@ Create Table Educacion (
     Id_Colaborador Integer Unsigned NOT NULL,
     FOREIGN KEY (Id_Colaborador) REFERENCES Colaborador (Id_Colaborador)      
 );
-
+--Cr7
 Create Table datosFamiliares(
     Id_datos_familiares Integer Unsigned PRIMARY KEY NOT NULL AUTO_INCREMENT,
     Nombres varchar(50) NOT NULL,
@@ -163,7 +164,7 @@ Create Table datosFamiliares(
     FOREIGN KEY (Id_parentesco) REFERENCES Parentesco (Id_parentesco),
     FOREIGN KEY (Id_Colaborador) REFERENCES Colaborador(Id_Colaborador)
 );
-
+--Cristian
 Create Table equipoTotal(
     Id_equipo_total Integer Unsigned PRIMARY KEY NOT NULL AUTO_INCREMENT,
     Id_equipo Integer Unsigned NOT NULL,
@@ -171,7 +172,7 @@ Create Table equipoTotal(
     FOREIGN KEY (Id_equipo) REFERENCES Equipo(Id_equipo),
     FOREIGN KEY (Id_Colaborador) REFERENCES Colaborador(Id_Colaborador)       
 );
-
+--Cr7
 Create table Experiencia_laboral(
     Id_experiencia_laboral Integer Unsigned PRIMARY KEY NOT NULL AUTO_INCREMENT,
     Empresa varchar(25) NOT NULL,
@@ -181,7 +182,7 @@ Create table Experiencia_laboral(
     Id_Colaborador Integer Unsigned NOT NULL,
     FOREIGN KEY (Id_Colaborador) REFERENCES Colaborador(Id_Colaborador)    
 );
-
+--Cr7
 Create Table Salud(
     Id_Salud Integer Unsigned PRIMARY KEY NOT NULL AUTO_INCREMENT,
     Enfermedades_Tratamiento TINYINT(1) NOT NULL,
@@ -195,7 +196,7 @@ Create Table Salud(
     Notificacion_emergencia Integer Unsigned NOT NULL,    
     FOREIGN KEY (Notificacion_emergencia) REFERENCES datosFamiliares(Id_datos_familiares)
 );
-
+--Cr7
 Create Table Area_laboral(
     Id_laboral Integer Unsigned PRIMARY KEY NOT NULL AUTO_INCREMENT,
     Id_area Integer Unsigned NOT NULL,
@@ -208,7 +209,7 @@ Create Table Area_laboral(
     FOREIGN KEY (Id_area) REFERENCES Area(Id_area),
     FOREIGN KEY (Id_puesto) REFERENCES Puesto(Id_puesto)
 );
-
+--Topo
 Create table Area_detalle(
     Id_area_detalle Integer Unsigned PRIMARY KEY NOT NULL AUTO_INCREMENT,
     Id_laboral Integer Unsigned NOT NULL,
@@ -216,7 +217,7 @@ Create table Area_detalle(
     FOREIGN KEY (Id_laboral) REFERENCES Area_laboral(Id_laboral),
     FOREIGN KEY (Id_Colaborador) REFERENCES Colaborador(Id_Colaborador)
 );
-
+--Las notificaciones las haremos después
 CREATE TABLE Notificaciones(
     Id_notificacion INTEGER Unsigned PRIMARY KEY NOT NULL AUTO_INCREMENT,
     Descripcion varchar(30) NOT NULL,
